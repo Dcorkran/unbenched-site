@@ -3,6 +3,7 @@ import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import Header from './header';
 // import Meta from './meta';
 import Video from './video';
+import Footer from './footer'
 
 
 const theme = {
@@ -14,6 +15,7 @@ const theme = {
   teal: '#13DEB6',
   salmon: '#ff6d68',
   blue: '#55a4ff',
+  coral: '#f88379',
   // maxWidth: '1000px',
   bs: '0 12px 24px 0 rgba(0, 0, 0, 0.09)',
 };
@@ -68,6 +70,7 @@ class Page extends Component {
           <Header />
           {/* <Video /> */}
           <Inner>{this.props.children}</Inner>
+          <Footer />
         </StyledPage>
       </ThemeProvider>
     );

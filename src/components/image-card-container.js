@@ -1,30 +1,32 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
-import { FaBeer } from 'react-icons/fa';
+import { FaSmile, FaBuilding, FaThumbsUp, FaUser } from 'react-icons/fa';
+import { Link } from 'gatsby';
 import ImageCard from './image-card';
 
 const Container = styled.div`
-  width: 75%;
+  width: 90%;
+  /* width: 80em; */
   display: flex;
   align-items: center;
   margin: 1em 1em;
-  justify-content: space-around;
+  justify-content: center;
 
-  /* @media only screen and (min-width: 767px) {
+  @media only screen and (min-width: 767px) {
     width: auto;
     display: flex;
     align-items: center;
     margin: 1em 1em;
     justify-content: space-around;
   }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 1050px) {
     flex-wrap: wrap;
     width: auto;
     display: flex;
     align-items: center;
     margin: 1em 1em;
-    justify-content: space-around;
-  } */
+    justify-content: center;
+  }
 `;
 
 const HeroText = styled.h1`
@@ -53,33 +55,41 @@ const Bubble = styled.div`
 `;
 
 const iconStyle = {
-  height: '30%',
+  zIndex: 3,
 };
 
-export default class ImageCardContainer extends PureComponent {
+export default class ImageCardContainer extends Component {
   render() {
+    const imageData = this.props.data.cardOne.childImageSharp.fluid;
+    const imageData2 = this.props.data.cardTwo.childImageSharp.fluid;
+    const imageData3 = this.props.data.cardThree.childImageSharp.fluid;
     return (
-      <OuterContainer>
-        <Bubble />
-        <HeroText>Don't Wait For Tomorrow!</HeroText>
-        <Container>
+      <Container>
+        <Link to='/join'>
           <ImageCard
+            imageData={imageData}
             mainText='Get Social'
-            text='Meet cool people and do fun activites together.'
-            icon={<FaBeer style={iconStyle} color='teal' size='3em' />}
+            text='Individual'
+            icon={<FaUser style={iconStyle} color='teal' size='3em' />}
           />
+        </Link>
+        <Link to='/join'>
           <ImageCard
+            imageData={imageData2}
             mainText='Volunteer'
-            text='Give back to your community. It’s a human thing.'
-            icon={<FaBeer style={iconStyle} color='teal' size='3em' />}
+            text='Company'
+            icon={<FaBuilding style={iconStyle} color='teal' size='3em' />}
           />
+        </Link>
+        <Link to='/join'>
           <ImageCard
+            imageData={imageData3}
             mainText='Real Connections'
-            text='We go beyond surface level friendships'
-            icon={<FaBeer style={iconStyle} color='teal' size='3em' />}
+            text='Sponsor'
+            icon={<FaThumbsUp style={iconStyle} color='teal' size='3em' />}
           />
-        </Container>
-      </OuterContainer>
+        </Link>
+      </Container>
     );
   }
 }

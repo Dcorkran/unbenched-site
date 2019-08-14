@@ -4,7 +4,7 @@ const NavStyles = styled.ul`
   margin: 0;
   padding: 0;
   display: flex;
-  justify-self: end;
+  justify-content: flex-end;
   font-size: 2rem;
   a,
   button {
@@ -24,7 +24,7 @@ const NavStyles = styled.ul`
       font-size: 10px;
       padding: 0 10px;
     }
-    &:before {
+    /* &:before {
       content: '';
       width: 2px;
       background: ${props => props.theme.lightgrey};
@@ -34,10 +34,10 @@ const NavStyles = styled.ul`
       transform: skew(-20deg);
       top: 0;
       bottom: 0;
-    }
+    } */
     &:after {
       height: 2px;
-      background: red;
+      background: ${props => props.theme.teal};
       content: '';
       width: 0;
       position: absolute;
@@ -51,14 +51,14 @@ const NavStyles = styled.ul`
     &:focus {
       outline: none;
       &:after {
-        width: calc(100% - 60px);
+        width: calc(100% - 50px);
       }
     }
   }
   @media (max-width: 1300px) {
     border-top: 1px solid ${props => props.theme.lightgrey};
     width: 100%;
-    justify-content: center;
+    justify-content: flex-end;
     font-size: 1.5rem;
   }
 `;

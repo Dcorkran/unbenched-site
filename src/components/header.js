@@ -22,7 +22,7 @@ const Logo = styled.h1`
   margin-left: 2rem;
   position: relative;
   z-index: 2;
-  transform: skew(-7deg);
+  /* transform: skew(-7deg); */
   a {
     padding: 0.5rem 1rem;
     background: ${props => props.theme.red};
@@ -38,11 +38,12 @@ const Logo = styled.h1`
 
 const StyledHeader = styled.header`
   .bar {
-    border-bottom: 10px solid ${props => props.theme.black};
     display: grid;
     grid-template-columns: auto 1fr;
     justify-content: space-between;
     align-items: stretch;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.22);
+    /* -webkit-box-shadow: 0 0 3px 0 rgba(0 0 3px 0 rgba(0,0,0,.22)); */
     /* @media (max-width: 1300px) {
       grid-template-columns: 1fr;
       justify-content: center;
