@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Unbenched',
+    author: 'Unbenched',
+    url: 'https://unbenched.org',
     description:
-      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    author: '@gatsbyjs',
+      'Unbenched is an organization that provides purposeful activities and conversations to inspire, support and motivate young adults in all areas of their lives.',
   },
   plugins: [
     {
@@ -46,8 +47,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Unbenched',
+        short_name: 'Unbenched',
         start_url: '/',
         // background_color: '#663399',
         // theme_color: '#663399',

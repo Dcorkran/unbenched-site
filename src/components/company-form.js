@@ -1,10 +1,8 @@
 import React from 'react';
-// import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import styled, { withTheme } from 'styled-components';
 import Button from '@material-ui/core/Button';
-import { textAlign } from '@material-ui/system';
 import * as emailjs from 'emailjs-com';
 
 const useStyles = makeStyles(theme => ({
@@ -87,11 +85,9 @@ export default function CompanyForm() {
       .send('dcorkrangmail', 'company', values, 'user_IN56cExs8nKfIruLAsVPT')
       .then(() => {
         setLoading({ ...loading, isSent: true });
-        console.log('done');
       })
       .catch(err => {
         setLoading({ ...loading, isError: true });
-        console.log(err);
       });
   };
 

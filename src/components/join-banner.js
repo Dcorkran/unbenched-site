@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import posed from 'react-pose';
-import Img from 'gatsby-image/withIEPolyfill';
 
 const AnimateText = posed.div({
   first: {
@@ -38,20 +37,9 @@ const LargeText = styled.h1`
   font-size: 3em;
 `;
 
-const Text = styled.h1`
-  color: black;
-  font-size: 2em;
-  padding: 0em 3.5em;
-`;
-
-const TestingDiv = styled.div`
-  width: 100%;
-  margin-left: 4em;
-`;
-
 export default class JoinBanner extends Component {
   render() {
-    const imageData = this.props.data.imageTwo.childImageSharp.fluid;
+    // const imageData = this.props.data.imageTwo.childImageSharp.fluid;
     return (
       <Container initialPose='first' pose='second'>
         <InnerContainer initialPose='first' pose='second'>

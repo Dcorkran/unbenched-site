@@ -23,7 +23,7 @@ const Container = styled.div`
 `;
 
 const iconStyle = {
-  'margin-top': '1em',
+  marginTop: '1em',
 };
 
 class CardContainer extends PureComponent {

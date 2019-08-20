@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import BackgroundImage from 'gatsby-background-image';
 import posed from 'react-pose';
-import Img from 'gatsby-image';
 
 const AnimateContainer = posed.div({
   first: {
@@ -50,8 +49,7 @@ const LargeText = styled.h1`
 
   @media (max-width: 600px) {
     font-size: 4em;
-    padding: 0em .5em;
-
+    padding: 0em 0.5em;
   }
 `;
 
@@ -62,7 +60,6 @@ const Text = styled.h1`
   @media (max-width: 600px) {
     font-size: 1.5em;
     padding: 0em 1.5em;
-
   }
 `;
 
