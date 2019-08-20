@@ -10,43 +10,6 @@ const Container = styled.div`
   justify-content: space-around;
 `;
 
-const iconStyle = {
-  'margin-top': '1em',
-  // height: '30%',
-};
-
-const HeaderText = styled.h1`
-  z-index: 3;
-  font-size: 3em;
-  margin-top: 1em;
-`;
-
-const FooterText = styled.h1`
-  font-size: 3em;
-  margin-bottom: 1em;
-`;
-
-// const InnerBenchContainer = styled.div`
-//   display: flex;
-//   @media only screen and (min-width: 767px) {
-//     width: auto;
-//     flex-wrap: wrap;
-//     flex-direction: row;
-//     align-items: center;
-//     margin: 1em 1em;
-//     justify-content: space-around;
-//     width: 60%;
-//   }
-//   @media only screen and (max-width: 767px) {
-//     flex-wrap: wrap;
-//     width: auto;
-//     flex-direction: column;
-//     align-items: center;
-//     margin: 1em 1em;
-//     justify-content: center;
-//   }
-// `;
-
 const TextContainer = styled.div`
   width: 55%;
 `;

@@ -1,28 +1,13 @@
-import React, { Component } from 'react';
-
-import { Link } from 'gatsby';
+import React from 'react';
 import styled from 'styled-components';
-// import Router from 'next/router';
-// import NProgress from 'nprogress';
 import Nav from './nav';
 import Image from './image';
-
-// Router.onRouteChangeStart = () => {
-//   NProgress.start();
-// }
-// Router.onRouteChangeComplete = () => {
-//   NProgress.done();
-// }
-// Router.onRouteChangeError = () => {
-//   NProgress.done();
-// }
 
 const Logo = styled.h1`
   font-size: 4rem;
   margin-left: 2rem;
   position: relative;
   z-index: 2;
-  /* transform: skew(-7deg); */
   a {
     padding: 0.5rem 1rem;
     background: ${props => props.theme.red};
@@ -30,10 +15,6 @@ const Logo = styled.h1`
     text-transform: uppercase;
     text-decoration: none;
   }
-  /* @media (max-width: 1300px) {
-    margin: 0;
-    text-align: center;
-  } */
 `;
 
 const StyledHeader = styled.header`
@@ -43,11 +24,6 @@ const StyledHeader = styled.header`
     justify-content: space-between;
     align-items: stretch;
     box-shadow: 0 0 8px 0 rgba(0,0,0,.22);
-    /* -webkit-box-shadow: 0 0 3px 0 rgba(0 0 3px 0 rgba(0,0,0,.22)); */
-    /* @media (max-width: 1300px) {
-      grid-template-columns: 1fr;
-      justify-content: center;
-    } */
   }
   .sub-bar {
     display: grid;
@@ -57,22 +33,16 @@ const StyledHeader = styled.header`
 `;
 
 const StyledDiv = styled.div`
-  margin: .5em;
+  margin: 0.5em;
   width: 15em;
 `;
 
 const Header = () => (
   <StyledHeader>
     <div className='bar'>
-      {/* <Logo>
-        <Link href='/'>
-          <a>test Fits</a>
-        </Link>
-      </Logo> */}
       <StyledDiv>
         <Image />
       </StyledDiv>
-
       <Nav />
     </div>
   </StyledHeader>

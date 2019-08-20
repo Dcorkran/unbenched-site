@@ -32,7 +32,6 @@ export default class BenchQuote extends Component {
 
   render() {
     const { icon, quote } = this.props;
-    console.log(this.props);
     return (
       <Container>
         <BenchIconContainer>

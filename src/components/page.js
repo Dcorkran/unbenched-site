@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import Header from './header';
 // import Meta from './meta';
-import Video from './video';
-import Footer from './footer'
-
+import Footer from './footer';
 
 const theme = {
   red: '#FF0000',
@@ -68,7 +66,6 @@ class Page extends Component {
         <StyledPage>
           <GlobalStyle />
           <Header />
-          {/* <Video /> */}
           <Inner>{this.props.children}</Inner>
           <Footer />
         </StyledPage>

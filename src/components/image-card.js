@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import posed, { PoseGroup } from 'react-pose';
+import posed from 'react-pose';
 
 import 'react-awesome-button/dist/styles.css';
 
@@ -11,12 +11,10 @@ const InnerContainer = styled.div`
   background-color: white;
   width: 100%;
   height: 40%;
-  /* transition: height 0.15s ease-out; */
   display: flex;
   align-items: center;
   position: relative;
   flex-direction: column;
-  /* transition: height 0.25s ease-out 0.25s; */
 `;
 const ImageContainer = styled.div`
   background-color: white;
@@ -26,7 +24,6 @@ const ImageContainer = styled.div`
   align-items: center;
   position: relative;
   flex-direction: column;
-  /* transition: height 0.25s ease-out 0.25s; */
 `;
 
 const AnimatedContainer = posed.div({
@@ -46,55 +43,7 @@ const Container = styled(AnimatedContainer)`
   height: 16em;
   margin: 2em 1em;
   width: 28em;
-  /* max-width: 28em; */
-  /* width: 20%;
-  min-width: 18em;
-  max-width: 25em;
-  min-width: 25em; */
   cursor: pointer;
-
-  /* &:hover ${InnerContainer} {
-    height: 70%;
-  }
-  &:hover ${ImageContainer} {
-    height: 30%;
-  } */
-  /* background-color: green; */
-`;
-
-const AnimatedTextContainer = posed.div({
-  isNotHovered: {
-    height: '40%',
-    transition: { duration: 400, ease: 'linear' },
-
-    flip: true,
-  },
-  isHovered: {
-    height: '80%',
-    transition: { duration: 400, ease: 'linear' },
-
-    flip: true,
-  },
-});
-
-const AnimatedImageContainer = posed.div({
-  isNotHovered: {
-    height: '60%',
-    transition: { duration: 400, ease: 'linear' },
-
-    flip: true,
-  },
-  isHovered: {
-    height: '20%',
-    transition: { duration: 400, ease: 'linear' },
-
-    flip: true,
-  },
-});
-
-const LargeText = styled.h1`
-  margin: auto;
-  height: 10%;
 `;
 
 const StlyedImg = styled(Img)`
@@ -103,18 +52,7 @@ const StlyedImg = styled(Img)`
 `;
 
 const Text = styled.h1`
-  /* height: 30%; */
   margin: 10px;
-  /* z-index: 3; */
-`;
-
-const OuterContainer = styled.div`
-  background-color: #f5f5f5;
-  display: flex;
-  flex-direction: column;
-  padding: 2em 0em;
-  align-items: center;
-  position: relative;
 `;
 
 const Bubble = styled.div`
@@ -127,27 +65,7 @@ const Bubble = styled.div`
   z-index: 0;
 `;
 
-// const config = {
-//   enter: { y: 0, opacity: 1, delay: 500 },
-//   exit: { y: 0, opacity: 0 }
-// }
-const StyledButton = styled(AwesomeButton)`
-  margin-top: 2em !important;
-`;
-const AnimatedButton = posed(StyledButton)({
-  enter: { y: 0, opacity: 1, delay: 500 },
-  exit: { y: 0, opacity: 0 },
-});
-
-// const Button = styled.button`
-
-// `
-
 export default class ImageCard extends Component {
-  state = {
-    hovered: false,
-  };
-
   render() {
     const { mainText, text, icon, imageData } = this.props;
     return (

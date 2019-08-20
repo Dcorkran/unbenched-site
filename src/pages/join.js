@@ -1,17 +1,12 @@
-import React, { Component } from 'react';
-import { graphql, Link, StaticQuery } from 'gatsby';
-import Layout from '../components/layout';
-import Image from '../components/image';
+import React from 'react';
+import { graphql, StaticQuery } from 'gatsby';
 import SEO from '../components/seo';
 import Page from '../components/page';
 import BenchContainer from '../components/bench-container';
 import ImageBanner from '../components/image-banner';
 import BubbleContainer from '../components/bubble-container';
-import EventBanner from '../components/event-banner';
 import IndividualMembership from '../components/individual-membership';
 import CompanyMembership from '../components/company-membership';
-
-import Video from '../components/video';
 import JoinBanner from '../components/join-banner';
 import Quote from '../components/quote';
 
@@ -23,20 +18,6 @@ const JoinPage = () => (
           mountains {
             title
             elevation
-          }
-        }
-        imageOne: file(relativePath: { eq: "header2.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 2000) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        imageTwo: file(relativePath: { eq: "header2.jpg" }) {
-          childImageSharp {
-            fluid(quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
           }
         }
         cardOne: file(relativePath: { eq: "image-card-individual.jpg" }) {
@@ -120,7 +101,7 @@ const JoinPage = () => (
     `}
     render={data => (
       <Page>
-        <SEO title='Join' keywords={['gatsby', 'application', 'react']} />
+        <SEO title='Join' />
         <JoinBanner data={data} backgroundPosition='center' />
         <Quote
           color='coral'
