@@ -15,7 +15,7 @@ const Box = posed.div({
   },
 });
 
-const Test = posed.h1({
+const AnimatedH1 = posed.h1({
   toggled: {
     opacity: 1,
     delay: 200,
@@ -25,7 +25,7 @@ const Test = posed.h1({
   },
 });
 
-const Test2 = posed.div({
+const InnerContainer = posed.div({
   toggled: {
     y: 0,
     delay: 150,
@@ -58,7 +58,7 @@ const LargeText = styled.h1`
   font-size: 2em !important;
 `;
 
-const Text = styled(Test)`
+const Text = styled(AnimatedH1)`
   height: 30%;
   margin: auto 1em;
 `;
@@ -77,13 +77,12 @@ export default class Card extends Component {
   render() {
     const { mainText, text, icon } = this.props;
     const { toggle } = this.state;
-    console.log(this.props);
     return (
-      <Container onMouseOver={this.onHover} onMouseOut={this.onHover}>
-        <Test2 pose={toggle ? 'toggled' : 'hidden'}>
+      <Container onFocus={this.onHover} onBlur={this.onHover} onMouseOver={this.onHover} onMouseOut={this.onHover}>
+        <InnerContainer pose={toggle ? 'toggled' : 'hidden'}>
           {icon}
           <LargeText>{mainText}</LargeText>
-        </Test2>
+        </InnerContainer>
         <Text pose={toggle ? 'toggled' : 'hidden'}>{text}</Text>
       </Container>
     );

@@ -1,32 +1,11 @@
-import React, { Component } from 'react';
-import { graphql, Link, StaticQuery } from 'gatsby';
-import Layout from '../components/layout';
-import Image from '../components/image';
+import React from 'react';
+import { graphql, StaticQuery } from 'gatsby';
 import SEO from '../components/seo';
 import Page from '../components/page';
 import CardContainer from '../components/card-container';
 import ImageCardContainer from '../components/image-card-container';
 import BubbleContainer from '../components/bubble-container';
 import EventBanner from '../components/event-banner';
-
-// const IndexPage = () => (
-// <Layout>
-//   <SEO title='Home' keywords={['gatsby', 'application', 'react']} />
-//   <h1>Hi people</h1>
-//   <p>Welcome to your new Gatsby site.</p>
-//   <p>Now go build something great.</p>
-//   <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-//     <Image />
-//   </div>
-//   <Link to='/page-2/'>Go to page 2</Link>
-// </Layout>
-// );
-
-// export default IndexPage;
-
-// import React from "react"
-
-import Video from '../components/video';
 import Banner from '../components/banner';
 import Quote from '../components/quote';
 
@@ -79,7 +58,7 @@ const IndexPage = () => (
     `}
     render={data => (
       <Page>
-        <SEO title='Home' keywords={['gatsby', 'application', 'react']} />
+        <SEO title='Home' />
         <Banner data={data} backgroundPosition='top center' />
         <Quote text='"Alone, we can do so little; together, we can do so much” – Helen Keller' />
         <BubbleContainer backgroundColor='' heroText='Why People Need Unbenched'>
@@ -95,28 +74,7 @@ const IndexPage = () => (
           />
         </BubbleContainer>
         <EventBanner data={data} />
-        {/* <h1>Hi people</h1>
-        <p>Welcome to your new Gatsby site.</p>
-        <p>Now go build something great.</p>
-        <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-          <Image />
-        <Link to='/page-2/'>Go to page 2</Link>
-        </div> */}
       </Page>
-      // <div>
-      //   <h1>USA Mountains</h1>
-      //   <ul>
-      //     {data.gcms.mountains.map(mountain => {
-      //       const { title, elevation } = mountain
-      //       return (
-      //         <li>
-      //           <strong>{title}:</strong>
-      //           {elevation}
-      //         </li>
-      //       )
-      //     })}
-      //   </ul>
-      // </div>
     )}
   />
 );

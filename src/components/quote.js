@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  background-color: ${props => props.color ? props.theme[props.color] : props.theme.teal};
+  background-color: ${props => (props.color ? props.theme[props.color] : props.theme.teal)};
   min-height: 15em;
   display: flex;
   align-items: center;
@@ -33,16 +33,12 @@ const Text = styled.h1`
 `;
 
 export default class Quote extends PureComponent {
-
   render() {
     const { color, text, smallText, ref } = this.props;
-    console.log(this.props)
     return (
       <Container color={color} ref={ref}>
         <LargeText>{text}</LargeText>
-        { smallText &&  
-            <SmallText>{smallText}</SmallText>
-        }
+        {smallText && <SmallText>{smallText}</SmallText>}
       </Container>
     );
   }

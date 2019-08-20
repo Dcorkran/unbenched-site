@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
 
-import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
@@ -16,6 +15,7 @@ const CopyContainer = styled.div`
   width: 30%;
   padding-left: 1em;
 `;
+
 const HiddenContainer = styled.div`
   width: 30%;
   display: hidden;
@@ -33,18 +33,19 @@ const CopyText = styled.p`
   color: white;
   margin-bottom: 0;
 `;
+
 const Footer = () => (
   <StyledDiv>
     <CopyContainer>
       <CopyText>© Copyright 2018-{new Date().getFullYear()}</CopyText>
     </CopyContainer>
     <IconContainer>
-    <a href="https://www.facebook.com/Unbenched1">
-      <FaFacebookSquare color='white' size='2em' />
-    </a>
-    <a href="https://www.instagram.com/unbenched/">
-      <FaInstagram color='white' size='2em' />
-    </a>
+      <a href='https://www.facebook.com/Unbenched1'>
+        <FaFacebookSquare color='white' size='2em' />
+      </a>
+      <a href='https://www.instagram.com/unbenched/'>
+        <FaInstagram color='white' size='2em' />
+      </a>
     </IconContainer>
     <HiddenContainer />
   </StyledDiv>

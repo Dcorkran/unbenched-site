@@ -14,21 +14,6 @@ const Container = styled.div`
   max-width: 60em;
 `;
 
-const iconStyle = {
-  'margin-top': '1em',
-};
-
-const HeaderText = styled.h1`
-  z-index: 3;
-  font-size: 3em;
-  margin-top: 1em;
-`;
-
-const FooterText = styled.h1`
-  font-size: 3em;
-  margin-bottom: 1em;
-`;
-
 const TextContainer = styled.div`
   width: 55%;
 `;
@@ -53,10 +38,6 @@ const TextMain = styled.h1`
 const TextSecondary = styled.h2`
   font-size: 1.5em;
   color: salmon;
-`;
-
-const TextContent = styled.h2`
-  font-size: 1.5em;
 `;
 
 const InnerImgContainer = styled.div`
