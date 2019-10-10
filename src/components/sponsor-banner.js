@@ -33,17 +33,10 @@ const Container = styled(AnimateContainer)`
   background-color: rgba(0,0,0,0.2);
 `;
 
-const TextContainer = styled.div`
-  width: 55%;
-`;
-
 const ImageContainer = styled(Img)`
   display: block;
   width: 100%;
   height: 100%;
-  @media (max-width: 800px) {
-    display: none;
-  }
 `;
 
 const TextMain = styled(AnimateText)`
@@ -55,18 +48,9 @@ const TextMain = styled(AnimateText)`
   width: 100%;
 `;
 
-const TextSecondary = styled.h2`
-  font-size: 1.5em;
-  color: salmon;
-`;
-
-const TextContent = styled.h2`
-  font-size: 1.5em;
-`;
-
 class SponsorBanner extends PureComponent {
   render() {
-    const { imgData, mainText, secondaryText, textContent, textContent2 } = this.props;
+    const { imgData } = this.props;
     return (
       <Container initialPose='first' pose='second'>
         <ImageContainer fluid={imgData} style={{ opacity: 0.8 }} />
@@ -74,12 +58,6 @@ class SponsorBanner extends PureComponent {
           Sponsorships
         </TextMain>
       </Container>
-
-      // <div class="overlay-image">
-      //     <img class="image" src="IMAGE" alt="Alt text" />
-      //     <div class="text">Image + text
-      //      NO HOVER</div>
-      //     </div>
     );
   }
 }
