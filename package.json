@@ -38,7 +38,9 @@
     "typography-theme-fairy-gates": "^0.16.19",
     "typography-theme-funston": "^0.16.19"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^6.4.0"
+  },
   "keywords": [
     "gatsby"
   ],

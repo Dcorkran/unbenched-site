@@ -4,9 +4,10 @@ import Img from 'gatsby-image';
 
 const Container = styled.div`
   width: 95%;
+  max-width: ${props => (props.condensed ? '80em' : null)};
   display: flex;
   align-items: center;
-  margin: 4em 1em;
+  margin: ${props => (props.margin ? props.margin : '4em 1em')};
   justify-content: space-around;
 `;
 
@@ -37,12 +38,12 @@ const TextContent = styled.h2`
 
 class ImageBanner extends PureComponent {
   render() {
-    const { imgData, mainText, secondaryText, textContent, textContent2 } = this.props;
+    const { condensed, hasLink, imgData, mainText, margin, secondaryText, textContent, textContent2 } = this.props;
     return (
-      <Container>
+      <Container condensed={condensed} margin={margin}>
         <TextContainer>
           <TextMain>{mainText}</TextMain>
-          <TextSecondary>{secondaryText}</TextSecondary>
+          {hasLink ? <TextSecondary>Website: <a href={secondaryText}>{secondaryText}</a></TextSecondary> : <TextSecondary>{secondaryText}</TextSecondary>}
           <TextContent>{textContent}</TextContent>
           <TextContent>{textContent2}</TextContent>
         </TextContainer>

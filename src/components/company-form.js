@@ -56,6 +56,8 @@ const OuterContainer = styled.div`
   align-content: center;
   width: 75%;
   padding: 2em;
+  text-align: center;
+
 `;
 
 export default function CompanyForm() {
